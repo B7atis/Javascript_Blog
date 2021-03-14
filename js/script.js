@@ -71,9 +71,11 @@ function generateTitleLinks(){
   for(let article of articles){
     article.querySelector(optArticleSelector);
     console.log('article = ', article);
-  }
 
     /* [IN PROGRESS] get the article id */
+
+    const articleId = article.getAttribute('id');
+    console.log('articleId = ', articleId);
 
     /* [IN PROGRESS] find the title element */
 
@@ -82,7 +84,7 @@ function generateTitleLinks(){
     /* [IN PROGRESS] create HTML of the link */
 
     /* [IN PROGRESS] insert link into titleList */
-
+  }
 }
 
 generateTitleLinks();

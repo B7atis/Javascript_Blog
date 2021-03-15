@@ -133,3 +133,17 @@ body {
     margin: 0 10px 0 0;
   }
 }
+
+/* Media */
+
+/* Responsiv min-width 320px min-height: 480px */
+
+@media (min-width: 320px) and (min-height: 480px) {
+  .sidebar {
+    text-align: center;
+  }
+
+  .wrapper {
+    display: block;
+  }
+}

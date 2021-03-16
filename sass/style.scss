@@ -136,14 +136,38 @@ body {
 
 /* Media */
 
-/* Responsiv min-width 320px min-height: 480px */
+/* Responsiv max-width 736px max-height: 736px */
 
-@media (min-width: 320px) and (min-height: 480px) {
-  .sidebar {
+@media (max-width: 736px) and (max-height: 736px) {
+
+  .section-title {
     text-align: center;
   }
 
   .wrapper {
     display: block;
+    font-size: 40px;
+  }
+
+  .sidebar ul li {
+    display: inline-block;
+    margin: 0px 12px 0 10px;
+    padding: 0px 5px 0px 0px;
+  }
+
+  .logo {
+    font-size: 200px;
+  }
+
+  .posts {
+    font-size: 50px;
+  }
+
+  .post-title {
+    font-size: 50px;
+  }
+
+  .section-title {
+    font-size: 40px;
   }
 }

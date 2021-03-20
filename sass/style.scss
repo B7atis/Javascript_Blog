@@ -17,7 +17,7 @@ $font-text: 'Signika', serif;
 
 body {
   background-image: url("../images/okragly-stol-pelen-roznorodnych-potraw-i-napojow-z-gadzetami-z-boku-tapeta-2560x1080-60487_14.jpg");
-  background-size: 100%;
+  background-size: cover;
   font-family: $font-text;
   color: $color-dark;
   font-weight: 300;
@@ -35,6 +35,7 @@ body {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
+
   span {
     text-transform: none;
     font-weight: 400;
@@ -83,6 +84,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
   .active {
     font-weight: bold;
   }
@@ -106,6 +108,7 @@ body {
 
 .post {
   display: none;
+
   &.active {
     display: block;
   }
@@ -129,6 +132,7 @@ body {
 
 .post-tags {
   display: flex;
+
   p {
     margin: 0 10px 0 0;
   }
@@ -139,7 +143,6 @@ body {
 /* Responsiv max-width 736px max-height: 736px */
 
 @media (max-width: 736px) and (max-height: 736px) {
-
   .section-title {
     text-align: center;
   }

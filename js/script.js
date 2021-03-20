@@ -122,9 +122,9 @@ function generateTags(){
   
     /* find tags wrapper */
 
-    const tagsList = article.querySelector(optArticleTagsSelector);
+    const tagWrapper = article.querySelector(optArticleTagsSelector);
 
-    console.log('tagsList = ', tagsList);
+    console.log('tagWrapper = ', tagWrapper);
 
     /* make html variable with empty string */
 
@@ -144,24 +144,24 @@ function generateTags(){
 
     for(let tag of articleTagsArray){
 
-      console.log('tag: ',tag);
+      console.log('tag: ' ,tag);
 
       /* generate HTML of the link */
 
-      const linkHTMLData = { id: tag, title: tag};
-      const linkHTML = templates.tagLink(linkHTMLData);
+      const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+      console.log(linkHTML);
 
       /* add generated code to html variable */
 
-      html = html + linkHTML + ' ';
+      html = html + linkHTML;
 
-    /* END LOOP: for each tag */
+      /* END LOOP: for each tag */
 
-    /* insert HTML of all the links into the tags wrapper */
+      /* insert HTML of all the links into the tags wrapper */
 
-    titleList.innerHTML = html;
+      tagWrapper.innerHTML = html;
 
-  /* END LOOP: for every article: */
+    /* END LOOP: for every article: */
     }
   }
 }

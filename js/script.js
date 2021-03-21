@@ -319,3 +319,12 @@ const authorClickHandler = function(event) {
 };
 
 authorClickHandler();
+
+function addClickListenersToAuthors() {
+  const linkAuthors = document.querySelectorAll('a[href^="#author-"]');
+  for(let linkAuthor of linkAuthors){
+    linkAuthor.addEventListener('click', authorClickHandler);
+  }
+}
+
+addClickListenersToAuthors();

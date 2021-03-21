@@ -193,13 +193,13 @@ function tagClickHandler(event){
 
   /* START LOOP: for each active tag link */
 
-  for(let activeTagLink of activeTagLinks);
+  for(let activeTagLink of activeTagLinks){
 
     /* remove class active */
 
     activeTagLink.classList.remove('active');
 
-  /* END LOOP: for each active tag link */
+    /* END LOOP: for each active tag link */
 
   }
 
@@ -215,7 +215,7 @@ function tagClickHandler(event){
 
     foundTagLink.classList.add('active');
 
-  /* END LOOP: for each found tag link */
+    /* END LOOP: for each found tag link */
 
   }
 
@@ -234,9 +234,9 @@ function addClickListenersToTags(){
 
   for(let linkTag of linkTags){
 
-      /* add tagClickHandler as event listener for that link */
+    /* add tagClickHandler as event listener for that link */
 
-      linkTag.addEventListener('click', tagClickHandler);
+    linkTag.addEventListener('click', tagClickHandler);
 
   /* END LOOP: for each link */
   }

@@ -66,7 +66,7 @@ function generateTitleLinks(customSelector = ''){
 
   /* [DONE] for each article */
 
-  const articles =  document.querySelectorAll(optArticleSelector);
+  const articles =  document.querySelectorAll(optArticleSelector + customSelector);
   console.log('customSelector = ', customSelector);
   console.log('articles = ', articles);
 
@@ -201,7 +201,7 @@ function tagClickHandler(event){
 
   /* END LOOP: for each active tag link */
 
-}
+  }
 
   /* find all tag links with "href" attribute equal to the "href" constant */
 
@@ -220,16 +220,26 @@ function tagClickHandler(event){
   }
 
   /* execute function "generateTitleLinks" with article selector as argument */
+
+  generateTitleLinks('[data-tags~="' + tag + '"]');
+
 }
 
 function addClickListenersToTags(){
   /* find all links to tags */
 
+  const linkTags = document.querySelectorAll('a[href^="#tag-"]');
+
   /* START LOOP: for each link */
+
+  for(let linkTag of linkTags){
 
       /* add tagClickHandler as event listener for that link */
 
+      linkTag.addEventListener('click', tagClickHandler);
+
   /* END LOOP: for each link */
+  }
 }
 
 addClickListenersToTags();

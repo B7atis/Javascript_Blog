@@ -1,5 +1,15 @@
 'use strict';
 
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles',
+  optArticleTagsSelector = '.post-tags .list',
+  optArticleAuthorSelector = '.post-author',
+  optTagsListSelector = '.tags.list',
+  optCloudClassCount = 5,
+  optCloudClassPrefix = 'tag-size-',
+  optAuthorListSelector = '.list.authors';
+
 const titleClickHandler = function(event){
   event.preventDefault();
   const clickedElement = this;
@@ -48,17 +58,6 @@ const links = document.querySelectorAll('.titles a');
 for(let link of links){
   link.addEventListener('click', titleClickHandler);
 }
-
-const optArticleSelector = '.post',
-  optTitleSelector = '.post-title',
-  optTitleListSelector = '.titles',
-  optArticleTagsSelector = '.post-tags .list',
-  optArticleAuthorSelector = '.post-author',
-  optTagsListSelector = '.tags.list',
-  optCloudClassCount = 5,
-  optCloudClassPrefix = 'tag-size-',
-  optAuthorListSelector = '.list.authors';
-
 
 function generateTitleLinks(customSelector = ''){
 
@@ -355,7 +354,7 @@ const generateAuthors = function(){
 
     /* generate html of the link */
 
-    const linkHTML = '<li><a href="#author-' + tagAuthor + '">' + tagAuthor + '</a></li>'; 
+    const linkHTML = '<a href="#author-' + tagAuthor + '">' + tagAuthor + '</a>'; 
 
     /* add generate code to html variable */
 
